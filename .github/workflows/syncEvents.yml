@@ -1,0 +1,47 @@
+name: syncEvents
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14.x
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Run sync events in parallel
+        run: |
+          node cli.js syncEvents deposit eth 0.1 --rpc $eth_rpc &
+          node cli.js syncEvents deposit eth 0.1 --rpc $goerli_rpc &
+          node cli.js syncEvents deposit eth 1 --rpc $eth_rpc &
+          node cli.js syncEvents deposit bnb 0.1 --rpc $bnb_rpc &
+          node cli.js syncEvents deposit bnb 1 --rpc $bnb_rpc &
+          node cli.js syncEvents withdraw eth 0.1 --rpc $eth_rpc &
+          node cli.js syncEvents withdraw eth 0.1 --rpc $goerli_rpc &
+          node cli.js syncEvents withdraw eth 1 --rpc $eth_rpc &
+          node cli.js syncEvents withdraw bnb 0.1 --rpc $bnb_rpc &
+          node cli.js syncEvents withdraw bnb 1 --rpc $bnb_rpc &
+          wait
+        env:
+          eth_rpc: https://1rpc.io/eth
+          bnb_rpc: https://1rpc.io/bnb
+          goerli_rpc: https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161
+      - name: Git commit --amend
+        uses: stefanzweifel/git-auto-commit-action@v4
+        if: ${{ always() }}
+        with:
+          file_pattern: "cache/*"
+          commit_message: Sync events
+          commit_author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
