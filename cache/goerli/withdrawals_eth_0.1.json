@@ -53275,5 +53275,12 @@
     "nullifierHash": "0x250d7734906b83c0c900d49bde825d90c7de4c587c0b862e658ffca65a4e14d7",
     "to": "0x3700477430374dC60B16F0553C01df88D7Be8c6A",
     "fee": "0"
+  },
+  {
+    "blockNumber": 8901735,
+    "transactionHash": "0x6d353122f377ffda7ad2941c29a7d4139735d42b441a91dd2918ad980bfbd9c4",
+    "nullifierHash": "0x23255012d1717201bcc000965490b2e5430b84f65e92a48bc75e66b2971eb22a",
+    "to": "0x6c6D89Bfb9760Ed8f9c83970eB604C2c10c8179E",
+    "fee": "0"
   }
 ]
