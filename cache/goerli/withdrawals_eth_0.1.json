@@ -54920,5 +54920,26 @@
     "nullifierHash": "0x2953ab684dc4a7bcbdc891b65be8211a794bb9cacf16fe1111bff6b7cf81a97d",
     "to": "0xCb75C706a45fefF971359F53dF7DD6dF47a41013",
     "fee": "0"
+  },
+  {
+    "blockNumber": 9397412,
+    "transactionHash": "0x9772bbaf8fb7a89ca67710b2477953ce136bfaf91c672cc9cab1b04b23746337",
+    "nullifierHash": "0x16b1ff21a5ec7d18a897280111908a730c7fd71aa8479374971c8bbbdd91a5ac",
+    "to": "0x47d86F4e6a85410DB28316F91b51666130883636",
+    "fee": "0"
+  },
+  {
+    "blockNumber": 9400778,
+    "transactionHash": "0x1c9e6f65658f939dadc49dc70da48c3f88589eb3d4dd5d96ac1602631b1f0fbc",
+    "nullifierHash": "0x20f264170e70009532941bc63b98476874c6ed8259604fa0afe0fb81e9fd850b",
+    "to": "0xc2E74B63F1e1bF6B8fB5eb66E4a5f7F6c1C00A4b",
+    "fee": "0"
+  },
+  {
+    "blockNumber": 9401645,
+    "transactionHash": "0x92ff583d7e94f3f511a644ecce49e02d281552cc9f2ff92a58046dd6b35c9ddc",
+    "nullifierHash": "0x0e4e030cf2d2b8a5562835e1255150df00fa6c5214b09603007be11e9d153164",
+    "to": "0x2F0c9DcF1d35B16ceEe0657b6509Cd83F12eF3fe",
+    "fee": "0"
   }
 ]
