@@ -56355,5 +56355,12 @@
     "nullifierHash": "0x26a4792c8151da819681fd19a2880ed97030a58bdfd6f64bbeb3920f8a9a0bd0",
     "to": "0xc0B57C69D335AC4EE974268090EcDE6a6a907E9f",
     "fee": "0"
+  },
+  {
+    "blockNumber": 10439995,
+    "transactionHash": "0x2300d453520a384681ab7d01b9b0857d2f7aa9ada79262f61ac0b5b2af3aee91",
+    "nullifierHash": "0x0395a3add82828273d1b6bfdbe14bc7765d9f94f82ed458edad0c9208aae90aa",
+    "to": "0xe1a163b95d0e0C9e6763A9146843F3FbA701a449",
+    "fee": "0"
   }
 ]
